@@ -1074,7 +1074,7 @@
                     }, basicBot.settings.commandCooldown * 1000);
                 }
                 if (executed) {
-                    API.moderateDeleteChat(chat.cid);
+                    // API.moderateDeleteChat(chat.cid);
                     basicBot.room.allcommand = false;
                     setTimeout(function () {
                         basicBot.room.allcommand = true;
