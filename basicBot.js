@@ -884,6 +884,10 @@
                 API.sendChat(subChat(basicBot.chat.permissionownsong, {name: user.username}));
                 user.ownSong = false;
             }
+            // MSG when a song containing "SLAM" is played.
+            if(/slam/i.test(obj.media.title)) {
+                API.sendChat("Michael Jordan could still beat the Monstars");
+            }
             clearTimeout(basicBot.room.autoskipTimer);
             if (basicBot.room.autoskip) {
                 var remaining = obj.media.duration * 1000;
